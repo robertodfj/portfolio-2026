@@ -1,6 +1,6 @@
-import Particles from './Particles';
-import BlurText from './BlurText';
-import FadeContent from './FadeContent.jsx';
+import Particles from './Components/Particles.jsx';
+import BlurText from './Components/BlurText.jsx';
+import FadeContent from './Components/FadeContent.jsx';
 
 const handleAnimationComplete = () => {
     console.log('Animation completed!');
