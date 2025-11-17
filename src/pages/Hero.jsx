@@ -1,95 +1,68 @@
-import Particles from './Components/Particles.jsx';
-import BlurText from './Components/BlurText.jsx';
-import FadeContent from './Components/FadeContent.jsx';
+// Hero.jsx
+import SplitText from "./Components/SplitText";
+import TextType from "./Components/TextType";
+import FadeContent from "./Components/FadeContent";
 
-const handleAnimationComplete = () => {
-    console.log('Animation completed!');
-};
+function handleAnimationComplete() {
+    console.log("Letter animation completed!");
+}
 
 function Hero() {
     return (
-        <section className='relative w-full h-screen bg-black overflow-hidden'>
-            {/* Partículas de fondo */}
-            <div className='absolute inset-0'>
-                <Particles
-                    particleColors={['#D8FFB4', '#B4FFC8']}
-                    particleCount={200}
-                    particleSpread={10}
-                    speed={0.1}
-                    particleBaseSize={100}
-                    moveParticlesOnHover={true}
-                    alphaParticles={false}
-                    disableRotation={false}
-                    style={{ width: '100%', height: '100%' }}
+        <div className="w-full min-h-screen flex flex-col items-center justify-center gap-10 px-4 md:px-0">
+
+            {/* Hero inicial */}
+            <div className="flex flex-col items-center justify-center gap-10 max-w-5xl w-full mx-auto">
+
+                <SplitText
+                    text="Hola, soy Roberto"
+                    className="jersey-10-regular text-center text-white text-6xl md:text-9xl drop-shadow-[0_0_25px_#00eaff]"
+                    delay={100}
+                    duration={0.6}
+                    ease="power3.out"
+                    splitType="chars"
+                    from={{ opacity: 0, y: 40 }}
+                    to={{ opacity: 1, y: 0 }}
+                    threshold={0.1}
+                    textAlign="center"
+                    onLetterAnimationComplete={handleAnimationComplete}
                 />
-            </div>
 
-            {/* Contenido encima */}
-            <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0} className='mt-5'>
-                <h1>Desarrollador de aplicaciones moviles</h1>
-            </FadeContent>
-            <div className="absolute inset-0 flex items-center justify-center z-10 text-white">
-                <div className="flex flex-col items-center justify-center z-10 text-white space-y-6">
-                    <BlurText
-                        text="Roberto De Frutos Jiménez"
-                        delay={150}
-                        animateBy="words"
-                        direction="top"
-                        onAnimationComplete={handleAnimationComplete}
-                        className="text-5xl mb-2 sm:text-6xl md:text-7xl font-bold text-center"
+                <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0}>
+                    <TextType
+                        text={["Desarrollador Full Stack", "Happy coding!"]}
+                        typingSpeed={75}
+                        pauseDuration={1500}
+                        showCursor={true}
+                        cursorCharacter="|"
+                        className="text-white text-2xl md:text-4xl text-center jersey-10-regular"
                     />
+                </FadeContent>
 
-                    <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0} className='mt-5'>
-                        <a href="/cv.pdf" download className="group relative">
-                            {/* Fondo del botón */}
-                            <div
-                                className="absolute -inset-1 rounded-xl bg-linear-to-r from-green-500 to-green-400 opacity-75 blur transition duration-300 group-hover:opacity-100"
-                            ></div>
-                            <div
-                                className="absolute -inset-1 rounded-xl bg-linear-to-r from-green-500 to-green-400 opacity-75 blur transition duration-300 group-hover:opacity-100 animation-delay-200"
-                            ></div>
+                {/* Botón y consola GitHub */}
+                <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0}>
+                    <div className="flex flex-col items-center gap-10 w-full">
 
-                            {/* Contenido del botón */}
-                            <span className="relative flex items-center gap-3 rounded-lg bg-black px-7 py-3 leading-none">
-                                <span
-                                    className="inline-block h-3 w-3 rounded-full bg-linear-to-tr from-green-400 to-green-300 opacity-80 shadow-lg shadow-green-400/50 transition-all duration-300 group-hover:scale-125"
-                                ></span>
+                        <button
+                            className="group relative bg-slate-900 h-16 w-64 md:w-72 border-2 border-teal-600 text-white text-base md:text-lg font-bold rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:border-emerald-400 hover:text-emerald-300 p-3 text-center
+                            before:absolute before:w-10 before:h-10 before:content[''] before:right-2 before:top-2 before:z-10 before:bg-indigo-500 before:rounded-full before:blur-lg before:transition-all before:duration-500
+                            after:absolute after:z-10 after:w-16 after:h-16 after:content[''] after:bg-teal-400 after:right-6 after:top-4 after:rounded-full after:blur-lg after:transition-all after:duration-500
+                            hover:before:right-10 hover:before:-bottom-4 hover:before:blur hover:after:-right-6 hover:after:scale-110"
+                        >
+                            Descargar CV
+                        </button>
 
-                                <span className="inline-flex flex-col gap-1">
-                                    <span className="text-sm font-medium text-green-400">Descargar CV</span>
-                                    <span className="text-[10px] font-light tracking-wider text-green-300/80">
-                                        Obtén mi CV actualizado
-                                    </span>
-                                </span>
+                    </div>
 
-                                <span
-                                    className="ml-auto transform transition-transform duration-300 group-hover:translate-x-1"
-                                >
-                                    {/* Ícono de descarga */}
-                                    <svg
-                                        className="h-5 w-5 text-green-400"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v8m0 0l-4-4m4 4l4-4M12 4v8"
-                                        />
-                                    </svg>
-                                </span>
+                </FadeContent>
 
-                                <div
-                                    className="absolute -bottom-2 left-1/2 h-px w-5/6 -translate-x-1/2 bg-linear-to-r from-transparent via-green-400 to-transparent opacity-50 blur-sm transition-all duration-300 group-hover:w-full"
-                                ></div>
-                            </span>
-                        </a>
-                    </FadeContent>
-                </div>
+                    <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-2xl">
+                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
             </div>
-        </section>
+        </div>
     );
 }
 
