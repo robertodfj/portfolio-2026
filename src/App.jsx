@@ -4,6 +4,7 @@ import Hero from './pages/Hero.jsx';
 import About from './pages/About.jsx';
 import Experience from './pages/Experience.jsx';
 import Tech from './pages/Tech.jsx';
+import Proyects from './pages/Proyects.jsx';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <About />
         <Experience />
         <Tech />
+        <Proyects />
       </div>
     </div>
   );
