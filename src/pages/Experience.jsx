@@ -10,7 +10,7 @@ function Experience() {
             <div className="w-full mt-10 flex justify-center">
                 <div style={{ position: 'relative', height: '250px', width: '100%', display: 'flex', justifyContent: 'center' }}>
                     <TextPressure
-                        text="Experiencia!"
+                        text="Experiencia"
                         flex={true}
                         alpha={false}
                         stroke={false}

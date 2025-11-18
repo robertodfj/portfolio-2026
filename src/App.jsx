@@ -3,6 +3,7 @@ import LetterGlitch from './pages/Components/LetterGlitch.jsx';
 import Hero from './pages/Hero.jsx';
 import About from './pages/About.jsx';
 import Experience from './pages/Experience.jsx';
+import Tech from './pages/Tech.jsx';
 
 function App() {
   return (
@@ -18,10 +19,11 @@ function App() {
       />
 
       {/* Contenido delante */}
-      <div className="relative z-10 overflow-y-auto h-full">
+      <div className="relative z-10 overflow-y-auto h-full" style={{ backgroundColor: 'rgba(0, 0, 1, 0.8)'}}>
         <Hero />
         <About />
         <Experience />
+        <Tech />
       </div>
     </div>
   );
