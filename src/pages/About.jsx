@@ -26,10 +26,22 @@ function About() {
           </p>
           <p className="text-white">+------------------------------+</p>
           <p className="text-green-400">1 row in set (0.01 sec)</p>
+          <br />
+          <p className="text-green-400">mysql&gt; SELECT linkedin FROM developers WHERE name = 'Roberto';</p>
+          <p className="text-white">+------------------------------+</p>
+          <p className="text-white text-center">|linkedin|</p>
+          <p className="text-white">+------------------------------+</p>
+          <p className="text-white">
+            <a href="https://linkedin.com/in/robertodfj" className="underline hover:text-teal-400">
+              https://linkedin.com/in/robertodfj
+            </a>
+          </p>
+          <p className="text-white">+------------------------------+</p>
+          <p className="text-green-400">1 row in set (0.04 sec)</p>
         </div>
       </aside>
 
-      <div className="mt-9 h-screen w-full">
+      <div className="mt-9 w-full">
         <div style={{ position: 'relative', height: '400px' }}>
           <TextPressure
             text="Sobre mi!"
