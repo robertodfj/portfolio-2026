@@ -2,6 +2,7 @@
 import LetterGlitch from './pages/Components/LetterGlitch.jsx';
 import Hero from './pages/Hero.jsx';
 import About from './pages/About.jsx';
+import Experience from './pages/Experience.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <div className="relative z-10 overflow-y-auto h-full">
         <Hero />
         <About />
+        <Experience />
       </div>
     </div>
   );

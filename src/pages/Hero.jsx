@@ -9,7 +9,7 @@ function handleAnimationComplete() {
 
 function Hero() {
     return (
-        <div className="w-full min-h-screen flex flex-col items-center justify-center gap-10 px-4 md:px-0">
+        <div className="w-full h-screen flex flex-col items-center justify-center gap-10 px-4 md:px-0">
 
             {/* Hero inicial */}
             <div className="flex flex-col items-center justify-center gap-10 max-w-5xl w-full mx-auto">
