@@ -12,7 +12,7 @@ const useIcons = (slugs) => {
     return Object.values(icons.simpleIcons).map((icon) =>
       renderSimpleIcon({
         icon,
-        size: 42,
+        size: 80,
         aProps: {
           onClick: (e) => e.preventDefault(),
         },
@@ -46,7 +46,7 @@ const DynamicIconCloud = () => {
   const icons = useIcons(slugs);
 
   return (
-    <div style={{ width: '950px', height: '400px', margin: '10 auto' }}>
+    <div style={{ width: '950px', height: '950px', margin: '0 auto' }} className='p-10 md:lr-10'>
       <Cloud>{icons}</Cloud>
     </div>
   );

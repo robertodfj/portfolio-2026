@@ -1,3 +1,4 @@
+// Tech.jsx
 import DynamicIconCloud from "./Components/DynamicIconCloud";
 import TextPressure from "./Components/TextPressure";
 
@@ -22,8 +23,11 @@ function Tech() {
                     />
                 </div>
             </div>
-            <DynamicIconCloud />
 
+            {/* Nube centrada */}
+            <div className="mt-10 w-full flex justify-center items-center">
+                <DynamicIconCloud />
+            </div>
 
         </div>
     );
