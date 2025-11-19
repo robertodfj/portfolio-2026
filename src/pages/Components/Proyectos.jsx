@@ -6,30 +6,22 @@ export default function EmpresaCard({ nombre, titulo, icono }) {
         {/* Fondos animados */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-tr from-green-500/5 to-green-400/10 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
-
           <div className="absolute -bottom-20 -left-20 w-48 h-48 rounded-full bg-linear-to-tr from-green-500/10 to-transparent blur-3xl opacity-30 group-hover:opacity-50 transition-all duration-700"></div>
           <div className="absolute top-10 left-10 w-16 h-16 rounded-full bg-green-500/5 blur-xl animate-ping"></div>
           <div className="absolute bottom-16 right-16 w-12 h-12 rounded-full bg-green-500/5 blur-lg animate-ping delay-1000"></div>
-
           <div className="absolute inset-0 bg-linear-to-r from-transparent via-green-500/5 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-1000"></div>
         </div>
 
         {/* Contenido */}
         <div className="p-8 relative z-10 h-full flex flex-col items-center text-center">
 
-          {/* Icono */}
+          {/* Icono / Emoji grande */}
           <div className="relative mb-6">
             <div className="absolute inset-0 rounded-full border-2 border-green-500/20 animate-ping"></div>
             <div className="absolute inset-0 rounded-full border border-green-500/10 animate-pulse delay-500"></div>
 
-            <div className="p-6 rounded-full backdrop-blur-lg border border-green-500/20 bg-linear-to-br from-black/80 to-gray-900/60 shadow-2xl transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-500">
-              <div className="w-12 h-12">
-                <img
-                  src={icono}
-                  alt="icono empresa"
-                  className="w-full h-full object-contain drop-shadow-xl"
-                />
-              </div>
+            <div className="p-6 rounded-full backdrop-blur-lg border border-green-500/20 bg-linear-to-br from-black/80 to-gray-900/60 shadow-2xl flex items-center justify-center text-5xl transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-500">
+              <span>{icono}</span>
             </div>
           </div>
 

@@ -30,6 +30,21 @@ export default function ProjectCard() {
       ),
     },
     {
+      icono: "☁️",
+      titulo: "MiniCloud",
+      nombre: (
+        <>
+          MiniCloud es un sistema en desarrollo que permite a varios usuarios subir, descargar y 
+          eliminar archivos de forma segura. Los archivos se cifran automáticamente y se almacenan 
+          en base de datos o carpetas por usuario, mientras el sistema atiende múltiples clientes 
+          simultáneamente mediante hilos en Java. 
+          <br />
+          <br />
+          ESTE PROYECTO ESTA EN DESARROLLO
+        </>
+      ),
+    },
+    {
       icono: "📋",
       titulo: "TaskFlow",
       nombre:
