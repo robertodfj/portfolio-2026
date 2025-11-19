@@ -6,6 +6,7 @@ import Experience from './pages/Experience.jsx';
 import Tech from './pages/Tech.jsx';
 import Proyects from './pages/Proyects.jsx';
 import TextPressure from './pages/Components/TextPressure.jsx';
+import Footer from './pages/Footer.jsx';
 
 function App() {
   return (
@@ -44,6 +45,13 @@ function App() {
           />
         </div>
         <Proyects />
+        <div className="mt-9 w-full" style={{ position: 'relative', height: '400px' }}>
+          <TextPressure
+            text="Contacto"
+          />
+
+          <Footer />
+        </div>
       </div>
     </div>
   );
