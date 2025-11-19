@@ -44,7 +44,7 @@ function About() {
       <div className="mt-9 w-full">
         <div style={{ position: 'relative', height: '400px' }}>
           <TextPressure
-            text="Sobre mi!"
+            text="¡Sobre mí!"
             flex={true}
             alpha={false}
             stroke={false}
@@ -56,53 +56,50 @@ function About() {
             minFontSize={32}
           />
         </div>
+      </div>
+
+      {/** Espacio para la tarjeta y la info **/}
+      <div className="w-full flex flex-col lg:flex-row justify-center items-start lg:items-center gap-8 px-4 md:px-8 mt-20">
+        {/* Tarjeta */}
+        <div className="w-full max-w-xl lg:mx-0 ">
+          <Tarjeta />
         </div>
 
-
-        {/** Espacio para la tarjeta y la info **/}
-        <div className="w-full flex flex-col lg:flex-row justify-center items-start lg:items-center gap-8 px-4 md:px-8 mt-20">
-          {/* Tarjeta */}
-          <div className="w-full max-w-xl lg:mx-0 ">
-            <Tarjeta />
+        {/* Información */}
+        <aside className="bg-black text-white p-6 rounded-lg font-mono shadow-lg w-full max-w-xl 
+                   h-auto md:h-[400px] lg:h-[600px] overflow-y-auto">
+          <div className="flex justify-between items-center">
+            <div className="flex space-x-2 text-red-500">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <p className="text-sm">mysql</p>
           </div>
 
-          {/* Información */}
-          <aside className="bg-black text-white p-6 rounded-lg font-mono shadow-lg w-full max-w-xl 
-                     h-auto md:h-[400px] lg:h-[600px] overflow-y-auto">
-            <div className="flex justify-between items-center">
-              <div className="flex space-x-2 text-red-500">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              </div>
-              <p className="text-sm">mysql</p>
-            </div>
+          <div className="mt-4 space-y-4">
+            <p className="text-green-400">SELECT info FROM developers WHERE name = 'Roberto';</p>
+            <p className="text-white border-b border-gray-700 pb-2">| Información personal |</p>
+            <p className="text-white">Nombre: Roberto de Frutos Jiménez</p>
+            <p className="text-white">Edad: 19 años</p>
+            <p className="text-white">Rol: Desarrollador Web Full Stack</p>
 
-            <div className="mt-4 space-y-4">
-              <p className="text-green-400"> SELECT info FROM developers WHERE name = 'Roberto';</p>
-              <p className="text-white border-b border-gray-700 pb-2">| Información personal |</p>
-              <p className="text-white">Nombre: Roberto de Frutos Jiménez</p>
-              <p className="text-white">Edad: 19 años</p>
-              <p className="text-white">Rol: Desarrollador Web Full Stack</p>
+            <p className="text-green-400 mt-4">SELECT desc FROM developers WHERE name = 'Roberto';</p>
+            <p className="text-white border-b border-gray-700 pb-2">| Un poco más sobre mí |</p>
+            <p className="text-white">
+              Soy un joven estudiante a punto de acabar DAM, estudio mientras trabajo, por lo que me ha hecho ser una persona organizada en busca de la perfección.
+            </p>
 
-              <p className="text-green-400 mt-4"> SELECT desc FROM developers WHERE name = 'Roberto';</p>
-              <p className="text-white border-b border-gray-700 pb-2">| Un poco más sobre mí |</p>
-              <p className="text-white">
-                Soy un joven estudiante a punto de acabar DAM, estudio mientras trabajo, por lo que me ha hecho ser una persona organizada en busca de la perfección.
-              </p>
-
-              <p className="text-green-400 mt-4"> SELECT live FROM developers WHERE name = 'Roberto';</p>
-              <p className="text-white border-b border-gray-700 pb-2">| En mi vida personal |</p>
-              <p className="text-white">
-                En mi tiempo libre disfruto de la música, el cine y la programación, siempre buscando aprender cosas nuevas y mejorar mis habilidades.
-              </p>
-            </div>
-          </aside>
-        </div>
-
+            <p className="text-green-400 mt-4">SELECT live FROM developers WHERE name = 'Roberto';</p>
+            <p className="text-white border-b border-gray-700 pb-2">| En mi vida personal |</p>
+            <p className="text-white">
+              En mi tiempo libre disfruto de la música, el cine y la programación, siempre buscando aprender cosas nuevas y mejorar mis habilidades.
+            </p>
+          </div>
+        </aside>
       </div>
+    </div>
   );
 }
 
 export default About;
-

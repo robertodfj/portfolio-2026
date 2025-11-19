@@ -67,7 +67,7 @@ function Footer() {
           </div>
 
           <p className="text-white mt-4">+------------------------------+</p>
-          <p className="text-white">© 2026 Roberto de Frutos Jimenez. Todos los derechos reservados.</p>
+          <p className="text-white">© 2026 Roberto de Frutos Jiménez. Todos los derechos reservados.</p>
         </div>
       </aside>
     </div>

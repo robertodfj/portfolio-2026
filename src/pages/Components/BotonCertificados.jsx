@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+
 export default function BotonCertificados({ texto = "Certificados" }) {
   return (
     <a
@@ -48,6 +51,7 @@ export default function BotonCertificados({ texto = "Certificados" }) {
         e.currentTarget.style.filter = "hue-rotate(0deg)";
       }}
     >
+      <FontAwesomeIcon icon={faDownload} className="text-xl" />
       {texto}
     </a>
   );

@@ -31,13 +31,12 @@ function Experience() {
                     <EmpresaCard
                         nombre="Abril 2025 - Actualidad"
                         titulo="Kyndryl"
-                          icono="https://www.kyndryl.com/content/experience-fragments/kyndrylprogram/us/en/sites/header/master/_jcr_content/root/header_copy/image.coreimg.svg/1636019574172/kyndryl-logo.svg"
-
+                        icono="https://www.kyndryl.com/content/experience-fragments/kyndrylprogram/us/en/sites/header/master/_jcr_content/root/header_copy/image.coreimg.svg/1636019574172/kyndryl-logo.svg"
                     />
 
                     <EmpresaCard
                         nombre="Marzo 2025 - Junio 2025"
-                        titulo="App Informatica"
+                        titulo="App Informática"
                         icono="/app.webp"
                     />
 

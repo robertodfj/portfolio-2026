@@ -1,4 +1,3 @@
-// App.jsx
 import LetterGlitch from './pages/Components/LetterGlitch.jsx';
 import Hero from './pages/Hero.jsx';
 import About from './pages/About.jsx';
@@ -22,7 +21,10 @@ function App() {
       />
 
       {/* Contenido delante */}
-      <div className="relative z-10 overflow-y-auto h-full" style={{ backgroundColor: 'rgba(0, 0, 1, 0.8)' }}>
+      <div
+        className="relative z-10 overflow-y-auto h-full"
+        style={{ backgroundColor: 'rgba(0, 0, 1, 0.8)' }}
+      >
         <Hero />
         <About />
 
@@ -32,6 +34,14 @@ function App() {
           />
         </div>
         <Experience />
+        
+        <div className="mt-9 w-full" style={{ position: 'relative', height: '400px' }}>
+          <TextPressure
+            text="Proyectos"
+          />
+        </div>
+        <Proyects />
+
         <div className="mt-9 w-full" style={{ position: 'relative', height: '400px' }}>
           <TextPressure
             text="Tecnologías"
@@ -39,15 +49,9 @@ function App() {
         </div>
         <Tech />
 
-        <div className="mt-9 w-full" style={{ position: 'relative', height: '400px' }}>
-          <TextPressure
-            text="Proyectos"
-          />
-        </div>
-        <Proyects />
-          <Footer />
-        </div>
+        <Footer />
       </div>
+    </div>
   );
 }
 

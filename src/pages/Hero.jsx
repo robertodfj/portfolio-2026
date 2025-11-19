@@ -2,6 +2,8 @@
 import SplitText from "./Components/SplitText";
 import TextType from "./Components/TextType";
 import FadeContent from "./Components/FadeContent";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 function handleAnimationComplete() {
     console.log("Letter animation completed!");
@@ -15,7 +17,7 @@ export default function Hero() {
       <div className="flex flex-col items-center justify-center gap-10 max-w-5xl w-full mx-auto">
 
         <SplitText
-          text="Hola, soy Roberto"
+          text="¡Hola, soy Roberto!"
           className="jersey-10-regular text-center text-white text-6xl md:text-9xl drop-shadow-[0_0_25px_#00eaff]"
           delay={100}
           duration={0.6}
@@ -25,12 +27,12 @@ export default function Hero() {
           to={{ opacity: 1, y: 0 }}
           threshold={0.1}
           textAlign="center"
-          onLetterAnimationComplete={() => console.log("Letter animation completed!")}
+          onLetterAnimationComplete={handleAnimationComplete}
         />
 
         <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0}>
           <TextType
-            text={["Desarrollador Full Stack", "Happy coding!"]}
+            text={["Desarrollador Full Stack", "¡Happy coding!"]}
             typingSpeed={75}
             pauseDuration={1500}
             showCursor={true}
@@ -42,18 +44,17 @@ export default function Hero() {
         {/* Botón Descargar CV */}
         <FadeContent blur={true} duration={2000} easing="ease-out" initialOpacity={0}>
           <div className="flex flex-col items-center gap-10 w-full">
-
             <a
               href="/cv.pdf" 
               download
               className="group relative bg-slate-900 h-16 w-64 md:w-72 border-2 border-teal-600 text-white text-base md:text-lg font-bold rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:border-emerald-400 hover:text-emerald-300 p-3 text-center
               before:absolute before:w-10 before:h-10 before:content-[''] before:right-2 before:top-2 before:z-10 before:bg-indigo-500 before:rounded-full before:blur-lg before:transition-all before:duration-500
               after:absolute after:z-10 after:w-16 after:h-16 after:content-[''] after:bg-teal-400 after:right-6 after:top-4 after:rounded-full after:blur-lg after:transition-all after:duration-500
-              hover:before:right-10 hover:before:-bottom-4 hover:before:blur hover:after:-right-6 hover:after:scale-110"
+              hover:before:right-10 hover:before:-bottom-4 hover:before:blur hover:after:-right-6 hover:after:scale-110 flex items-center justify-center gap-2"
             >
-              Descargar CV
+                <FontAwesomeIcon icon={faDownload} className="text-xl" />
+                Descargar CV
             </a>
-
           </div>
         </FadeContent>
 
@@ -68,4 +69,3 @@ export default function Hero() {
     </div>
   );
 }
-
