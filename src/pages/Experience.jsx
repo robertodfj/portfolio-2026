@@ -38,19 +38,19 @@ function Experience() {
                     <EmpresaCard
                         nombre="Marzo 2025 - Junio 2025"
                         titulo="App Informatica"
-                        icono="https://www.ticnova.es/esp/retail.php"
+                        icono="/app.webp"
                     />
 
                     <EmpresaCard
                         nombre="2024 - Actualidad"
                         titulo="DAM"
-                        icono="/icons/empresa-logo.png"
+                        icono="/birrete.png"
                     />
 
                     <EmpresaCard
                         nombre="2022 - 2024"
                         titulo="SMR"
-                        icono="/icons/empresa-logo.png"
+                        icono="/birrete.png"
                     />
                 </div>
             </div>

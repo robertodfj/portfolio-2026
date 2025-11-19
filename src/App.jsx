@@ -45,15 +45,9 @@ function App() {
           />
         </div>
         <Proyects />
-        <div className="mt-9 w-full" style={{ position: 'relative', height: '400px' }}>
-          <TextPressure
-            text="Contacto"
-          />
-
           <Footer />
         </div>
       </div>
-    </div>
   );
 }
 

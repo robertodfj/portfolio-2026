@@ -24,17 +24,14 @@ const useIcons = (slugs) => {
 };
 
 const slugs = [
-  'azure',
   'android',
   'androidstudio',
   'javascript',
   'netlify',
   'vercel',
-  'visualstudiocode',
   'html5',
   'css3',
   'react',
-  'java',
   'spring',
   'jira',
   'tailwindcss',
