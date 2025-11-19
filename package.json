@@ -18,6 +18,7 @@
     "@tailwindcss/vite": "^4.1.17",
     "framer-motion": "^12.23.24",
     "gsap": "^3.13.0",
+    "keen-slider": "^6.8.6",
     "meshline": "^3.3.1",
     "motion": "^12.23.24",
     "ogl": "^1.0.11",
