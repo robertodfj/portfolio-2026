@@ -1,9 +1,29 @@
+import { useState, useEffect } from "react";
 import TextPressure from "./Components/TextPressure";
 import Tarjeta from "./Components/Tarjeta";
 
 function About() {
+  const [loading, setLoading] = useState(true);
+
+  // Cuando el componente monta, dejamos un pequeño delay
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 600); 
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div className="min-h-screen w-full px-4 md:px-0 py-20">
+
+      {/* ---------------- LOADER OVERLAY ---------------- */}
+      {loading && (
+        <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
+          <p className="text-white text-2xl font-mono animate-pulse">
+            Cargando...
+          </p>
+        </div>
+      )}
+      {/* ------------------------------------------------ */}
+
       <aside className="bg-black text-white p-6 rounded-lg w-full max-w-md md:max-w-lg font-mono shadow-lg items-center mx-auto mt-10">
         <div className="flex justify-between items-center">
           <div className="flex space-x-2 text-red-500">
@@ -58,7 +78,7 @@ function About() {
         </div>
       </div>
 
-      {/** Espacio para la tarjeta y la info **/}
+      {/* Espacio para la tarjeta y la info */}
       <div className="w-full flex flex-col lg:flex-row justify-center items-start lg:items-center gap-8 px-4 md:px-8 mt-20">
         {/* Tarjeta */}
         <div className="w-full max-w-xl lg:mx-0 ">
