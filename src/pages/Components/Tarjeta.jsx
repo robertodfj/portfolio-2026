@@ -23,8 +23,8 @@ export default function Tarjeta() {
           <Band />
         </Physics>
 
-        {/* Entorno solo para luces, sin fondo */}
-        <Environment background={false} blur={0.75}>
+        {/* Entorno solo para luces, blur desactivado */}
+        <Environment background={false} blur={0}>
           <Lightformer intensity={2} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
@@ -69,19 +69,41 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
     }
   }, [hovered, dragged]);
 
+  // --- freeze logic ---
+  const threshold = 0.05;
+
   useFrame((state, delta) => {
+    // ---- arrastrando ----
     if (dragged) {
       vec.set(state.pointer.x, state.pointer.y, 0.5).unproject(state.camera);
       dir.copy(vec).sub(state.camera.position).normalize();
       vec.add(dir.multiplyScalar(state.camera.position.length()));
       [card, j1, j2, j3, fixed].forEach((ref) => ref.current?.wakeUp());
-      card.current?.setNextKinematicTranslation({ x: vec.x - dragged.x, y: vec.y - dragged.y, z: vec.z - dragged.z });
+      card.current?.setNextKinematicTranslation({
+        x: vec.x - dragged.x,
+        y: vec.y - dragged.y,
+        z: vec.z - dragged.z
+      });
     }
 
+    // --- freeze when idle ---
+    if (!dragged && card.current) {
+      const lv = card.current.linvel();
+      const av = card.current.angvel();
+      if (Math.abs(lv.x) < threshold && Math.abs(lv.y) < threshold && Math.abs(lv.z) < threshold &&
+          Math.abs(av.x) < threshold && Math.abs(av.y) < threshold && Math.abs(av.z) < threshold) {
+        card.current.sleep();
+      }
+    }
+
+    // ---- movimiento cuerda ----
     if (fixed.current) {
       [j1, j2].forEach((ref) => {
         if (!ref.current.lerped) ref.current.lerped = new THREE.Vector3().copy(ref.current.translation());
-        const clampedDistance = Math.max(0.1, Math.min(1, ref.current.lerped.distanceTo(ref.current.translation())));
+        const clampedDistance = Math.max(
+          0.1,
+          Math.min(1, ref.current.lerped.distanceTo(ref.current.translation()))
+        );
         ref.current.lerped.lerp(ref.current.translation(), delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed)));
       });
 
@@ -89,7 +111,9 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
       curve.points[1].copy(j2.current.lerped);
       curve.points[2].copy(j1.current.lerped);
       curve.points[3].copy(fixed.current.translation());
-      band.current.geometry.setPoints(curve.getPoints(32));
+
+      // 32 → 16 puntos
+      band.current.geometry.setPoints(curve.getPoints(16));
 
       ang.copy(card.current.angvel());
       rot.copy(card.current.rotation());
@@ -113,21 +137,31 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
         <RigidBody position={[1.5, 0, 0]} ref={j3} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
+
         <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
+
           <group
-            scale={2.5} // aumenta el espacio ocupado por la tarjeta
+            scale={1.8}  // 2.5 → 1.8 para bajar coste
             position={[0, -1.2, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
             onPointerDown={(e) =>
-              (e.target.setPointerCapture(e.pointerId), drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))
+              (e.target.setPointerCapture(e.pointerId),
+                drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))
             }>
             <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial map={materials.base.map} map-anisotropy={16} clearcoat={1} clearcoatRoughness={0.15} roughness={0.3} metalness={0.5} />
+              <meshPhysicalMaterial
+                map={materials.base.map}
+                map-anisotropy={16}
+                clearcoat={0.1}             // ↓ antes 1.0
+                clearcoatRoughness={0.2}
+                roughness={0.1}            // ↑ un poco, mejor rendimiento
+                metalness={0.5}
+              />
             </mesh>
-            <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
+            <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.4} />
             <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
           </group>
         </RigidBody>
@@ -135,7 +169,15 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
 
       <mesh ref={band}>
         <meshLineGeometry />
-        <meshLineMaterial color="white" depthTest={false} resolution={[width, height]} useMap map={texture} repeat={[-3, 1]} lineWidth={1} />
+        <meshLineMaterial
+          color="white"
+          depthTest={false}
+          resolution={[width, height]}
+          useMap
+          map={texture}
+          repeat={[-3, 1]}
+          lineWidth={1}
+        />
       </mesh>
     </>
   );
