@@ -79,7 +79,7 @@ function About() {
       </div>
 
       {/* Espacio para la tarjeta y la info */}
-      <div className="w-full flex flex-col lg:flex-row justify-center items-start lg:items-center gap-8 px-4 md:px-8 mt-20">
+      <div className="w-full flex flex-col lg:flex-row justify-center items-start lg:items-center gap-8 px-4 md:px-8 mt-[-200px] md:mt-10">
         {/* Tarjeta */}
         <div className="w-full max-w-xl lg:mx-0 ">
           <Tarjeta />

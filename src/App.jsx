@@ -28,26 +28,27 @@ function App() {
         <Hero />
         <About />
 
-        <div className="mt-9 w-full" style={{ position: 'relative', height: '400px' }}>
+        <div className="md:mt-[-50px] mt-[-15px] w-full" style={{ position: 'relative', height: '400px' }}>
           <TextPressure
             text=" Experiencia"
           />
         </div>
-        <Experience />
+        <div className="-mt-80 md:mt-0"><Experience /></div>
+        
         
         <div className="mt-9 w-full" style={{ position: 'relative', height: '400px' }}>
           <TextPressure
             text="Proyectos"
           />
         </div>
-        <Proyects />
+        <div className="-mt-80 md:mt-0"><Proyects /></div>
 
         <div className="mt-9 w-full" style={{ position: 'relative', height: '400px' }}>
           <TextPressure
             text="Tecnologías"
           />
         </div>
-        <Tech />
+        <div className="mt-[-300px] md:mt-0"><Tech /></div>
 
         <Footer />
       </div>
