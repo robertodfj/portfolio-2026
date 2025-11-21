@@ -43,12 +43,12 @@ function App() {
         </div>
         <div className="-mt-80 md:mt-0"><Proyects /></div>
 
-        <div className="mt-9 w-full" style={{ position: 'relative', height: '400px' }}>
+        <div className="md:mt-9 -mt-10 w-full" style={{ position: 'relative', height: '400px' }}>
           <TextPressure
             text="Tecnologías"
           />
         </div>
-        <div className="mt-[-300px] md:mt-0"><Tech /></div>
+        <div className="-mt-80 md:mt-0"><Tech /></div>
 
         <Footer />
       </div>
