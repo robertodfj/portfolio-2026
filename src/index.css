@@ -5,3 +5,32 @@
   font-weight: 400;
   font-style: normal;
 }
+
+/* ===== Scrollbar global estilo pastilla verde ===== */
+
+/* Para navegadores basados en WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;               /* ancho del scroll */
+  height: 10px;              /* scroll horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;   /* fondo transparente */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #25d366;   /* verde WhatsApp / pastilla */
+  border-radius: 10px;         /* forma redondeada */
+  border: 2px solid #0f0f0f;   /* bordecito para separarlo del fondo (opcional) */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1cb856;
+}
+
+/* ===== Para Firefox ===== */
+* {
+  scrollbar-width: thin; /* grosor */
+  scrollbar-color: #25d366 transparent;
+}
