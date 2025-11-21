@@ -8,7 +8,10 @@ export default function BotonCertificados({ texto = "Certificados" }) {
       download
       className="
         relative 
-        inline-block
+        inline-flex
+        items-center
+        gap-3
+        whitespace-nowrap
         cursor-pointer 
         uppercase 
         tracking-[0.5rem] 
