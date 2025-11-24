@@ -1,4 +1,4 @@
-🟩🖤 Portfolio 2026 – Roberto de Frutos 🟩🖤
+#🟩🖤 Portfolio 2026 – Roberto de Frutos 🟩🖤
 
 ¡Bienvenido a mi Portfolio 2026, una versión completamente renovada, más pulida y con una estética mucho más cuidada que la edición anterior! 🚀
 
