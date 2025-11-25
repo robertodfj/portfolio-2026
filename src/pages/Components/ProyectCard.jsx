@@ -40,7 +40,7 @@ export default function ProjectCard() {
           simultáneamente mediante hilos en Java. 
           <br />
           <br />
-          ESTE PROYECTO ESTA EN DESARROLLO
+          PROYECTO MÁS RECIENTE!
         </>
       ),
     },
