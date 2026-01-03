@@ -1,4 +1,6 @@
-# 🟩🖤 Portfolio 2026 – Roberto de Frutos
+# 👨🏽‍💻 Portfolio 2026 – Roberto de Frutos
+
+![imagen portada] (https://github.com/robertodfj/portfolio-2026/blob/main/Captura%20de%20pantalla%202026-01-03%20a%20las%2018.07.31.png)
 
 Este portfolio representa mi evolución como desarrollador **front-end y full-stack**, con una versión completamente renovada, pulida y con una estética mucho más profesional. Incluye nuevas tecnologías, un diseño refinado y una experiencia visual más moderna que la edición anterior.
 
@@ -36,35 +38,28 @@ Este portfolio representa mi evolución como desarrollador **front-end y full-st
 - **🖤 Diseño completamente responsive** adaptado a todas las resoluciones.
 
 ---
- Objetivo del portfolio
+## Objetivo del portfolio
 
-Presentar de una manera elegante, moderna e interactiva:
-	•	Mis proyectos recientes.
-	•	Mis habilidades como desarrollador.
-	•	Mi estilo personal de diseño.
-	•	Mi crecimiento técnico durante 2025 – 2026.
-
-⸻
-
-🟩 Contacto
-
-📧 Email: robertodfj93@gmail.com
-🐙 GitHub: https://github.com/robertodfj
-💼 LinkedIn: https://www.linkedin.com/in/robertodfj/
+	- Presentar de una manera elegante, moderna e interactiva:
+	- Mis proyectos recientes.
+	- Mis habilidades como desarrollador.
+	- Mi estilo personal de diseño.
+	- Mi crecimiento técnico durante 2025 – 2026.
 
 ⸻
 
-🟩🖤 ¡Gracias por visitar mi Portfolio 2026!
+## 🟩 Contacto
+	•📧 Email: robertodfj93@gmail.com
+	•🐙 GitHub: https://github.com/robertodfj
+	•💼 LinkedIn: https://www.linkedin.com/in/robertodfj/
+
+⸻
+
+🖤 ¡Gracias por visitar mi Portfolio 2026!
 
 Espero que disfrutes tanto la experiencia visual y técnica como yo he disfrutado desarrollándolo.
 
-## 🟩 Cómo ejecutar el proyecto
 
-```bash
-git clone https://github.com/robertodfj/portfolio-2026.git
-cd portfolio-2026
-npm install
-npm run dev
 
 
 
