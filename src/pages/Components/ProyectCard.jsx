@@ -9,6 +9,36 @@ export default function ProjectCard() {
 
   const proyectos = [
     {
+      icono: "🍽️📱",
+      titulo: "Mesero APP",
+      nombre: (
+          <div className="space-y-3 text-sm leading-relaxed">
+            <p>
+                <strong>MeseroApp</strong> es una aplicación Android desarrollada en
+                <strong> Java con Android Studio</strong>, orientada a la gestión integral
+                de bares y sus comandas en tiempo real.
+            </p>
+  
+            <p>La aplicación permite:</p>
+  
+            <ul className="list-disc list-inside space-y-1">
+              <li>🍺 Gestionar bares, mesas y productos de forma eficiente.</li>
+              <li>📝 Crear, modificar y administrar pedidos/comandas por mesa.</li>
+              <li>📦 Controlar el stock de productos en tiempo real.</li>
+              <li>📩 Enviar facturas automáticamente por correo electrónico.</li>
+              <li>🔔 Recibir notificaciones cuando los pedidos están listos.</li>
+              <li>💾 Persistencia de datos con Room y SharedPreferences.</li>
+              <li>🔄 Actualización automática de la interfaz con LiveData.</li>
+            </ul>
+  
+            <p>
+              Este proyecto refleja la aplicación de buenas prácticas en el desarrollo
+              Android y la creación de una solución pensada para un entorno real de negocio.
+            </p>
+        </div>
+      ),
+    },
+    {
       icono: "🍽️",
       titulo: "Mesero WEB",
       nombre: (
