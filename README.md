@@ -1,7 +1,6 @@
 # 👨🏽‍💻 Portfolio 2026 – Roberto de Frutos
 
-![imagen portada] (https://github.com/robertodfj/portfolio-2026/blob/main/Captura%20de%20pantalla%202026-01-03%20a%20las%2018.07.31.png)
-
+![Imagen de portada](https://raw.githubusercontent.com/robertodfj/portfolio-2026/main/Captura%20de%20pantalla%202026-01-03%20a%20las%2018.07.31.png)
 Este portfolio representa mi evolución como desarrollador **front-end y full-stack**, con una versión completamente renovada, pulida y con una estética mucho más profesional. Incluye nuevas tecnologías, un diseño refinado y una experiencia visual más moderna que la edición anterior.
 
 ---
