@@ -28,8 +28,15 @@ function Experience() {
                         max-w-4xl          /* evita que se expandan demasiado */
                     "
                 >
+
                     <EmpresaCard
-                        nombre="Abril 2025 - Actualidad"
+                        nombre="Febrero 2026 - Actualidad"
+                        titulo="GETD (Global Exchange)"
+                        icono="https://assets-sharedcontent.global-exchange.com/1dced37c-b424-4190-a730-3c9ce29c6369.svg"
+                    />
+                    
+                    <EmpresaCard
+                        nombre="Abril 2025 - Enero 2026"
                         titulo="Kyndryl"
                         icono="https://www.kyndryl.com/content/experience-fragments/kyndrylprogram/us/en/sites/header/master/_jcr_content/root/header_copy/image.coreimg.svg/1636019574172/kyndryl-logo.svg"
                     />
