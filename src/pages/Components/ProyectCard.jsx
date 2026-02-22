@@ -9,6 +9,33 @@ export default function ProjectCard() {
 
   const proyectos = [
     {
+      icono: "🤖🧪🥼",
+      titulo: "Rick & Morty Telegram BOT",
+      nombre: (
+          <div className="space-y-3 text-sm leading-relaxed">
+            <p>
+                <strong>Rick & Morty Telegram BOT</strong> es una API desarrollada en
+                <strong> .NET con C#</strong>, orientada a la jugabilidad y trading de
+                objetos a traves de comandos en telegram
+            </p>
+  
+            <p>La aplicación permite:</p>
+  
+            <ul className="list-disc list-inside space-y-1">
+              <li>🔐 Autenticacion con JWT</li>
+              <li>🏪 Subir items a la tienda</li>
+              <li>🛒 Comprar items a otros jugadores</li>
+              <li>📊 Persistencia de datos con SQL</li>
+            </ul>
+  
+            <p>
+               Este proyecto refleja las multiples opciones que permite la programacion y creacion de APIS,
+              tanto para videojuegos como para negocios digitales.
+            </p>
+        </div>
+      ),
+    },
+    {
       icono: "🍽️📱",
       titulo: "Mesero APP",
       nombre: (
