@@ -52,12 +52,6 @@ function Experience() {
                         titulo="DAM"
                         icono="/birrete.png"
                     />
-
-                    <EmpresaCard
-                        nombre="2022 - 2024"
-                        titulo="SMR"
-                        icono="/birrete.png"
-                    />
                 </div>
             </div>
         </div>
